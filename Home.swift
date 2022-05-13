@@ -19,9 +19,10 @@ struct Home: View {
             SpriteView(scene: RainFall(),options: [.allowsTransparency])
             VStack{
                 VStack{
-                    Text("19 : 30")
-                        .font(.system(size: 80))
-                    Text("Tues 10 May")
+                    Text("\(Date().formatted(.dateTime.hour().minute()))")
+                        .font(.system(size: 60))
+                        .padding()
+                    Text("\(Date().formatted(.dateTime.month().day().year()))"))
                         
                 }.foregroundColor(.white)
                 .padding()
